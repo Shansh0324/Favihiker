@@ -1,0 +1,251 @@
+/* Authored on the 1440px mockup grid: 1 --u = 1 design px, scaled to the screen width. */
+.shell {
+  container-type: inline-size;
+}
+.page {
+  --u: calc(100cqw / 1440);
+  --blue: #1d3bff;
+  --grey: #d2d2d2;
+  overflow-x: clip;
+  background: #000;
+  color: #000;
+  font-family: var(--font-neutra), system-ui, sans-serif;
+}
+/* :where keeps this at zero class weight so .abs sizes win */
+:where(.page) svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Every placed element reads --x/--y/--w/--h (design px); a missing --w/--h falls back to auto. */
+.sec {
+  position: relative;
+  height: calc(var(--sh) * var(--u));
+  overflow: hidden;
+}
+.abs {
+  position: absolute;
+  left: calc(var(--x) * var(--u));
+  top: calc(var(--y) * var(--u));
+  width: calc(var(--w) * var(--u));
+  height: calc(var(--h) * var(--u));
+}
+.center {
+  text-align: center;
+}
+
+/* ---------- Type ---------- */
+.word,
+.h2,
+.cardLogo,
+.label b {
+  font-stretch: 125%;
+  text-transform: uppercase;
+}
+.word {
+  color: #fff;
+  font-size: calc(250 * var(--u));
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+.word sup,
+.cardLogo sup {
+  margin-left: 0.08em;
+  font-size: 0.42em;
+  font-weight: 300;
+  vertical-align: 0.9em;
+}
+.h2 {
+  font-size: calc(82 * var(--u));
+  font-weight: 500;
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+}
+.stagger span {
+  display: block;
+  padding-left: calc(var(--i) * var(--u));
+}
+.small {
+  font-size: max(9px, calc(11 * var(--u)));
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.light {
+  color: #fff;
+}
+.copy {
+  text-transform: none;
+  letter-spacing: 0.01em;
+  opacity: 0.8;
+}
+
+/* ---------- Surfaces ---------- */
+.hero {
+  background: linear-gradient(180deg, #000 0%, #000 50%, #050f7a 62%, var(--blue) 74%, #6474f2 87%, var(--grey) 100%);
+}
+.grey {
+  background: var(--grey);
+}
+.dark {
+  background: #000;
+}
+.product {
+  background: linear-gradient(180deg, #000 0%, #000 10%, #0a1bb0 26%, var(--blue) 40%, #4c63f7 58%, #9aa5ec 78%, #d3d4df 100%);
+}
+.black {
+  background: #000;
+}
+.blue {
+  background: var(--blue);
+}
+.bar {
+  background: #000;
+}
+.barLight {
+  background: #fff;
+}
+.dot {
+  background: #000;
+}
+.fade {
+  background: linear-gradient(180deg, #000 0%, #000 42%, var(--blue) 100%);
+}
+
+/* ---------- Pieces ---------- */
+.orb {
+  filter: drop-shadow(0 calc(40 * var(--u)) calc(60 * var(--u)) rgb(29 59 255 / 0.45));
+}
+.orbMark {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 16%;
+  height: 16%;
+  color: #fff;
+  filter: drop-shadow(0 0 calc(18 * var(--u)) rgb(29 59 255 / 0.9));
+}
+.tile {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.tile > svg {
+  width: 82%;
+  height: 82%;
+}
+.tile > .tileMark {
+  width: 38%;
+  height: 38%;
+  color: #fff;
+}
+.card {
+  background: #000;
+  color: #fff;
+}
+.cardLogo {
+  position: absolute;
+  left: calc(90 * var(--u));
+  top: calc(330 * var(--u));
+  display: flex;
+  align-items: center;
+  gap: calc(24 * var(--u));
+  font-size: calc(96 * var(--u));
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.cardLogo svg {
+  width: calc(96 * var(--u));
+  height: calc(96 * var(--u));
+}
+.cardNote {
+  position: absolute;
+  top: calc(40 * var(--u));
+  right: calc(40 * var(--u));
+}
+.float {
+  z-index: 2;
+  filter: drop-shadow(0 calc(30 * var(--u)) calc(40 * var(--u)) rgb(0 0 0 / 0.35));
+}
+.fade {
+  z-index: 3;
+}
+.bigMark {
+  color: #000;
+}
+.chip {
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  color: #fff;
+  font-size: max(9px, calc(11 * var(--u)));
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.paper {
+  display: grid;
+  place-items: center;
+  background: #f2f2f2;
+}
+.pouch {
+  position: relative;
+  width: calc(460 * var(--u));
+  height: calc(700 * var(--u));
+  filter: drop-shadow(0 calc(30 * var(--u)) calc(30 * var(--u)) rgb(0 0 0 / 0.3));
+}
+.label {
+  position: absolute;
+  left: 12%;
+  top: 16%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  height: 68%;
+  padding: calc(24 * var(--u)) 0;
+  background: var(--blue);
+  color: #fff;
+}
+.label svg {
+  width: 40%;
+  height: auto;
+}
+.label b {
+  font-size: calc(46 * var(--u));
+  font-weight: 500;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.tag {
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  padding: calc(12 * var(--u));
+  background: #000;
+  color: #fff;
+  font-size: max(9px, calc(12 * var(--u)));
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.mini {
+  display: flex;
+  align-items: center;
+  gap: calc(10 * var(--u));
+  padding: calc(10 * var(--u));
+  background: #fff;
+  font-size: max(9px, calc(11 * var(--u)));
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.mini svg {
+  width: auto;
+  aspect-ratio: 1;
+}

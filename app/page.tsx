@@ -1,9 +1,5 @@
-import FavHero from "./FavHero";
+import Landing from "./Landing";
 
 export default function Home() {
-  return (
-    <main>
-      <FavHero />
-    </main>
-  );
+  return <Landing />;
 }

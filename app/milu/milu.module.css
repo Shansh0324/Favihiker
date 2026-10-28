@@ -697,11 +697,11 @@
 
   .hero {
     height: auto;
-    padding: 130px 24px 96px;
+    padding: 130px 24px 170px;
     border-radius: 0 0 32px 32px;
   }
   .heroLeft { width: 120px; }
-  .heroRight { top: auto; bottom: 0; width: 160px; }
+  .heroRight { top: auto; bottom: 0; width: 140px; }
   .heroTitle { font-size: clamp(28px, 6.4cqw, 52px); }
   .heroText { margin-top: 18px; font-size: 14px; line-height: 1.7; }
   .heroCtas { flex-wrap: wrap; gap: 10px; margin-top: 26px; }
@@ -732,11 +732,11 @@
   .occCard h3 { margin-top: 8px; font-size: 15px; }
   .occCard p { margin-bottom: 4px; font-size: 13px; }
 
-  .why { padding-top: 90px; }
+  .why { padding-top: 170px; }
   .doodle { display: none; }
-  .stickerMeat { left: 3%; top: 150px; width: 76px; }
-  .stickerTomato { left: auto; right: 16%; top: 40px; width: 66px; }
-  .stickerSea { left: auto; right: 2%; top: 92px; width: 84px; }
+  .stickerMeat { left: 6%; top: 70px; width: 80px; }
+  .stickerTomato { left: auto; right: 28%; top: 54px; width: 70px; }
+  .stickerSea { left: auto; right: 5%; top: 78px; width: 88px; }
   .tag { padding: 4px 16px; font-size: 13px; }
   .heading { margin-top: 22px; padding: 0 16px; font-size: clamp(28px, 7cqw, 52px); }
   .reasons {
